@@ -14,7 +14,7 @@ body, html {
   align-items: center;
   flex-direction: column; /* Elemen dalam div disusun vertikal */
   height: 80vh;
-  background: url('images/background1.jpg') no-repeat center center/cover;
+  background: url('background1.jpg') no-repeat center center/cover;
   background-position: center 50%; /* Atur posisi gambar latar */
 }
 
@@ -44,7 +44,7 @@ body, html {
   justify-content: center;  /* Pusatkan konten secara vertikal */
   align-items: center;      /* Pusatkan konten secara horizontal */
   height: 100vh;
-  background: url('images/background2.jpg') no-repeat center center/cover;
+  background: url('background2.jpg') no-repeat center center/cover;
   background-position: center 50%; /* Atur posisi gambar latar */
   color: #000000;            /* Pastikan warna teks sesuai */
   text-align: center;        /* Pusatkan teks secara horizontal */
