@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ucapan Ulang Tahun</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="message-screen">
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1 class="happy-birthday-text">Happy Birthday  Cici Ranti!🎉 </h1>
+    <p class="message">🎉 Selamat ulang tahun, semoga Tuhan senantiasa memberkati hidupmu dengan kesehatan yang baik, umur panjang, dan rejeki yang melimpah. Semoga setiap langkahmu dipenuhi dengan kebahagiaan dan kedamaian, serta segala berkat terbaik dari Tuhan mengiringi perjalanan hidupmu, Amin</p>
+    <div id="confetti-container"></div>
+    <audio id="birthday-audio" autoplay loop>
+      <source src="lagu.mp3" type="audio/mp3">
+      Browser Anda tidak mendukung pemutar audio.
+    </audio>
+  </div>
+
+  <script>
+    // Memutar audio otomatis
+    const audio = document.getElementById('birthday-audio');
+    audio.play().catch(() => {
+      console.log("Autoplay tidak diizinkan. Klik untuk memulai musik.");
+    });
+
+    document.body.addEventListener("click", () => {
+      if (audio.paused) audio.play();
+    });
+
+    // Animasi konfeti
+    const confettiContainer = document.getElementById('confetti-container');
+    function createConfetti() {
+      const confetti = document.createElement('div');
+      confetti.classList.add('confetti');
+      confetti.style.left = Math.random() * 100 + 'vw';
+      confetti.style.animationDuration = Math.random() * 3 + 2 + 's';
+      confettiContainer.appendChild(confetti);
+
+      // Hapus konfeti setelah animasi selesai
+      setTimeout(() => confetti.remove(), 5000);
+    }
+
+    // Generate konfeti secara berkala
+    setInterval(createConfetti, 200);
+  </script>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    © Copyright 2024 - Dibuat Oleh Revin.develop
+  </footer>
+</body>
+</html>

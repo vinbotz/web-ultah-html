@@ -1,0 +1,110 @@
+/* Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+}
+
+/* Halaman awal (index.html) */
+.intro-screen {
+  display: flex;
+  justify-content: center; /* Pusatkan tombol */
+  align-items: center;
+  flex-direction: column; /* Elemen dalam div disusun vertikal */
+  height: 80vh;
+  background: url('images/background1.jpg') no-repeat center center/cover;
+  background-position: center 50%; /* Atur posisi gambar latar */
+}
+
+.click-me-button {
+  margin-top: auto; /* Tempatkan tombol di bawah */
+  margin-bottom: 50px; /* Tambahkan jarak dari bawah */
+  padding: 15px 30px;
+  font-size: 18px;
+  color: white;
+  background: rgba(0, 0, 0, 0.7); /* Transparansi hitam */
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  animation: bounce 2s infinite;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Halaman ucapan (greeting.html) */
+.message-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Pusatkan konten secara vertikal */
+  align-items: center;      /* Pusatkan konten secara horizontal */
+  height: 100vh;
+  background: url('images/background2.jpg') no-repeat center center/cover;
+  background-position: center 50%; /* Atur posisi gambar latar */
+  color: #000000;            /* Pastikan warna teks sesuai */
+  text-align: center;        /* Pusatkan teks secara horizontal */
+  overflow: hidden;
+}
+
+.happy-birthday-text {
+  font-size: 3em;
+  margin: 0;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.message {
+  font-size: 1.5em;
+  margin: 20px 0;
+}
+
+#confetti-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: hsl(200, 100%, 50%);
+  border-radius: 50%;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Warna latar dengan transparansi */
+  color: white;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  z-index: 10; /* Memastikan footer berada di atas elemen lain */
+}
